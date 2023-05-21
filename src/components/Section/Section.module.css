@@ -10,7 +10,7 @@ section{
 }
 
 section:first-child{
-    margin-top: 100px;
+    margin-top: 50px;
     border-radius: 20px 20px 0 0; 
     background: linear-gradient(#fcb045, #fd1d1d);
 
