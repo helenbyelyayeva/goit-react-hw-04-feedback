@@ -1,0 +1,21 @@
+
+.btn{
+    border: none;
+    border-radius: 20px;
+    background-color: aliceblue;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: capitalize;
+    padding: 10px 20px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+    transition-property:transform;
+    transition: 500ms cubic-bezier(.4,0,.2,1);
+}
+.btn:hover{
+    transform: scale(1.05);
+}
+.btn:not(:last-child){
+    margin-right: 20px;
+}
+
