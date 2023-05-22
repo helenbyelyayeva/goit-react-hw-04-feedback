@@ -11,6 +11,10 @@ export const App = () => {
     bad: 0,
   });
 
+  const onCount = variable => {
+    setValue({ ...defaultValue, [variable]: defaultValue[variable] + 1 });
+  };
+
   const countTotalFeedback = () => {
     const total = defaultValue.good + defaultValue.neutral + defaultValue.bad;
     return total;
@@ -21,29 +25,6 @@ export const App = () => {
       ? Math.round((defaultValue.good / countTotalFeedback()) * 100)
       : 0;
   };
-
-  // onCount = e => {
-  //   setState(prevState => {
-  //     const variable = e.target.textContent;
-  //     return {
-  //       [variable]:prevState[variable] + 1,
-  //     };
-  //   });
-  // };
-
-  const onCount = name => {
-    setValue(prevState => {
-      const value = prevState[name];
-      return { ...prevState, [name]: value + 1 };
-    });
-  };
-
-  // const onCount = e => {
-  //   setValue(prevState => {
-  //     const variable = prevState[e.target.textContent];
-  //     return { ...prevState, [variable]: variable + 1 };
-  //   });
-  // };
 
   const sum = countTotalFeedback();
   const positive = countPositiveFeedbackPercentage()
